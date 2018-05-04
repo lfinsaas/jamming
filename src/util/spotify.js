@@ -68,7 +68,7 @@ const Spotify = {
                     .then(response => response.json())
                     .then(jsonResponse => playlist_id = jsonResponse.id)
                     .then(() => {
-                        const addPlaylistTrackURL = `https://api.spotify.com/v1/${user_id}/playlists/${playlist_id}/tracks`;
+                        const addPlaylistTrackURL = `https://api.spotify.com/v1/users/${user_id}/playlists/${playlist_id}/tracks`;
                         fetch(addPlaylistTrackURL, {
                             method: 'POST',
                             headers: headers,
